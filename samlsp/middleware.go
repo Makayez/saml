@@ -199,7 +199,7 @@ func (m *Middleware) CreateSessionFromAssertion(w http.ResponseWriter, r *http.R
 		return
 	}
 
-	http.Redirect(w, r, redirectURI, http.StatusFound)
+	http.Redirect(w, r, redirectURI, http.StatusTemporaryRedirect)
 }
 
 // RequireAttribute returns a middleware function that requires that the
